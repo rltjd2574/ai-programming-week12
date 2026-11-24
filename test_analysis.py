@@ -1,6 +1,6 @@
 def test_mini_score_range():
     assert analysis.미니["점수"].between(0, 100).all()
-    
+
 import analysis
 
 
@@ -24,3 +24,6 @@ def test_mini_average():
 
 def test_mini_class_types():
     assert sorted(analysis.미니["반"].unique()) == ["1반", "2반"]
+
+def test_cleaned_score_range():
+    assert analysis.df["점수"].between(0, 100).all()
